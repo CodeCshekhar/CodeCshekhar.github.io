@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeCshekhar Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Shekhar Kumar</h1>
+        <nav>
+            <a href="#intro" onclick="showSection('intro')">Intro</a>
+            <a href="#education" onclick="showSection('education')">Education</a>
+            <a href="#skills" onclick="showSection('skills')">Skills</a>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="intro" class="active">
+            <h2>About Me</h2>
+            <div id="intro-details">
+                <h1 style="font-size: 3em;">Chandrashekhar Wagh</h1> <!-- Increased font size -->
+        <img src="D:\CodeCshekhar.github.io\My Image.jpg" alt="Chandrashekhar Wagh" style="width: 200px; height: auto; float: left; margin-right: 200px;">
+        <p>I'm based in India</p>
+        <p>Passionate software developer with expertise in web technologies and programming.</p>
+        <p>🔭 I'm currently working on: Java, Hibernate - JPA, Springboot, REST APIs, and Python</p>
+        <p>🌱 I'm currently learning: Full-Stack Development</p>
+        <p>👯 I'm looking to collaborate on: Web Development projects</p>
+        <p>📫 How to reach me: cwagh2309@gmail.com</p>
+        <p>⚡ Fun fact: I am funny</p>
+            </div>
+        </section>
+
+        <section id="education" class="hidden">
+            <h2>Education</h2>
+            <div id="education-details">
+                <div class="education-item">
+                    <h3>Bachelor of Technology in Electronics</h3>
+                    <p>Vidyalankar Instituete Of Technology | 2021-2025</p>
+                    <p class="additional-info hidden">CGPA: 7.5/10 in Electronics Engineering</p>
+                </div>
+            </div>
+            <button onclick="toggleEducationDetails()">Show Details</button>
+        </section>
+
+        <section id="skills" class="hidden">
+            <h2>Skills</h2>
+            <div id="skills-progress">
+                <div class="skill">
+                    <span>Java</span>
+                    <div class="progress-bar" data-progress="90"></div>
+                </div>
+                <div class="skill">
+                    <span>Hibernate JPA</span>
+                    <div class="progress-bar" data-progress="90"></div>
+                </div>
+                <div class="skill">
+                    <span>Springboot</span>
+                    <div class="progress-bar" data-progress="90"></div>
+                </div>
+                <div class="skill">
+                    <span>REST APIs</span>
+                    <div class="progress-bar" data-progress="90"></div>
+                </div>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="progress-bar" data-progress="90"></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress-bar" data-progress="80"></div>
+                </div>
+                <div class="skill">
+                    <span>React</span>
+                    <div class="progress-bar" data-progress="75"></div>
+                </div>
+            </div>
+            <button onclick="animateSkills()">Visualize Skills</button>
+        </section>
+
+        <section id="projects" class="hidden">
+            <h2>Projects</h2>
+            <div id="project-carousel">
+                <div class="project active">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Responsive personal portfolio demonstrating web development skills.</p>
+                </div>
+                <div class="project hidden">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack e-commerce application with payment integration.</p>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button onclick="prevProject()">Previous</button>
+                <button onclick="nextProject()">Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 CodeCshekhar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
