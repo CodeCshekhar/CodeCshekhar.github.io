@@ -1,4 +1,4 @@
-Chandrashekhar Wagh - Portfolio
+# Chandrashekhar Wagh (CodeCShekhar)- Portfolio
 
 **Welcome to my portfolio!**
 
