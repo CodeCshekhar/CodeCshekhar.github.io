@@ -1,43 +1,46 @@
-// Section Navigation
-function showSection(sectionId) {
-    // Hide all sections
-    const sections = document.querySelectorAll('main section');
-    sections.forEach(section => section.classList.remove('active'));
-    
-    // Show selected section
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.classList.add('active');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.section');
 
+    // Scroll observer for showing sections on scroll
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
 
+    sections.forEach((section) => observer.observe(section));
 
-// Education Section Interaction
-function toggleEducationDetails() {
-    const additionalInfo = document.querySelector('.additional-info');
-    additionalInfo.classList.toggle('hidden');
-}
-
-// Skills Section Interaction
-function animateSkills() {
-    const skillBars = document.querySelectorAll('.progress-bar');
-    skillBars.forEach(bar => {
-        const progress = bar.dataset.progress;
-        bar.style.width = `${progress}%`;
+    // Smooth scrolling for navigation buttons
+    const navButtons = document.querySelectorAll('nav button');
+    navButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const sectionId = button.getAttribute('data-section');
+            const targetSection = document.getElementById(sectionId);
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     });
-}
 
-// Projects Section Carousel
-let currentProjectIndex = 0;
-const projects = document.querySelectorAll('.project');
+    // Contact form handling
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Message sent successfully!');
+        contactForm.reset();
+    });
 
-function nextProject() {
-    projects[currentProjectIndex].classList.remove('active');
-    currentProjectIndex = (currentProjectIndex + 1) % projects.length;
-    projects[currentProjectIndex].classList.add('active');
-}
+    // Dynamically set element heights for better responsiveness
+    function adjustHeights() {
+        const profileImage = document.querySelector('.profile-image');
+        profileImage.style.height = `${profileImage.offsetWidth}px`;
+    }
 
-function prevProject() {
-    projects[currentProjectIndex].classList.remove('active');
-    currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
-    projects[currentProjectIndex].classList.add('active');
-}
+    window.addEventListener('resize', adjustHeights);
+    adjustHeights();
+});

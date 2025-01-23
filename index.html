@@ -2,106 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CodeCshekhar Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Shekhar Kumar</h1>
+    <div class="portfolio-container">
+        <header>
+            <div class="profile-section">
+                <div class="profile-image">
+                </div>
+                <h1>Chandrashekhar Wagh</h1>
+                <p>Full Stack Web Developer</p>
+            </div>
+        </header>
+
         <nav>
-            <a href="#intro" onclick="showSection('intro')">Intro</a>
-            <a href="#education" onclick="showSection('education')">Education</a>
-            <a href="#skills" onclick="showSection('skills')">Skills</a>
-            <a href="#projects" onclick="showSection('projects')">Projects</a>
+            <div class="nav-wrapper">
+                <button data-section="about">About</button>
+                <button data-section="skills">Skills</button>
+                <button data-section="projects">Projects</button>
+                <button data-section="resume">Resume</button>
+                <button data-section="contact">Contact</button>
+            </div>
         </nav>
-    </header>
 
-    <main id="content">
-        <section id="intro" class="active">
-            <h2>About Me</h2>
-            <div id="intro-details">
-                <h1 style="font-size: 3em;">Chandrashekhar Wagh</h1> <!-- Increased font size -->
-        <img src="D:\CodeCshekhar.github.io\My Image.jpg" alt="Chandrashekhar Wagh" style="width: 200px; height: auto; float: left; margin-right: 200px;">
-        <p>I'm based in India</p>
-        <p>Passionate software developer with expertise in web technologies and programming.</p>
-        <p>🔭 I'm currently working on: Java, Hibernate - JPA, Springboot, REST APIs, and Python</p>
-        <p>🌱 I'm currently learning: Full-Stack Development</p>
-        <p>👯 I'm looking to collaborate on: Web Development projects</p>
-        <p>📫 How to reach me: cwagh2309@gmail.com</p>
-        <p>⚡ Fun fact: I am funny</p>
-            </div>
-        </section>
+        <main>
+            <section id="about" class="section active">
+                <div class="section-content">
+                    <h2>About Me</h2>
+                    <p>I am a Junior Full-Stack Developer specializing in Java, with extensive experience in building scalable, 
+                    high-performance applications. My expertise spans across backend technologies like Spring Boot, 
+                    Spring MVC, Hibernate, and JPA, along with frontend technologies such as HTML5, CSS, and JavaScript.</p>
+                    <div class="social-links">
+                    <div class="social-icon">
+                        <a href="https://github.com/CodeCshekhar" class="social-icon">GitHub</a>
+                        <a href="https://www.linkedin.com/in/chandrashekhar-wagh-240197330/" class="social-icon">LinkedIn</a>
+                        <a href="https://x.com/ChanduWagh23" class="social-icon">X.com</a>
+                    </div>
+                    </div>
+                </div>
+            </section>
 
-        <section id="education" class="hidden">
-            <h2>Education</h2>
-            <div id="education-details">
-                <div class="education-item">
-                    <h3>Bachelor of Technology in Electronics</h3>
-                    <p>Vidyalankar Instituete Of Technology | 2021-2025</p>
-                    <p class="additional-info hidden">CGPA: 7.5/10 in Electronics Engineering</p>
+            <section id="skills" class="section">
+                <div class="section-content">
+                    <h2>Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">Springboot</div>
+                        <div class="skill-item">MySQL</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">HTML/CSS</div>
+                        <div class="skill-item">Git</div>
+                    </div>
                 </div>
-            </div>
-            <button onclick="toggleEducationDetails()">Show Details</button>
-        </section>
+            </section>
 
-        <section id="skills" class="hidden">
-            <h2>Skills</h2>
-            <div id="skills-progress">
-                <div class="skill">
-                    <span>Java</span>
-                    <div class="progress-bar" data-progress="90"></div>
+            <section id="projects" class="section">
+                <div class="section-content">
+                  <h2>Projects</h2>
+                  <div class="projects-grid">
+                    <div class="project-card">
+                      <div class="project-image-Ecommerce">                     
+                      </div>
+                      <h3>E-commerce Platform</h3>
+                      <p>Full-stack web application</p>
+                      <div class="project-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                      </div>
+                    </div>
+                    <div class="project-card">
+                      <div class="project-image-BugTracker">
+                      </div>
+                      <h3>Task Management App</h3>
+                      <p>Productivity tracking application</p>
+                      <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>Firebase</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="skill">
-                    <span>Hibernate JPA</span>
-                    <div class="progress-bar" data-progress="90"></div>
-                </div>
-                <div class="skill">
-                    <span>Springboot</span>
-                    <div class="progress-bar" data-progress="90"></div>
-                </div>
-                <div class="skill">
-                    <span>REST APIs</span>
-                    <div class="progress-bar" data-progress="90"></div>
-                </div>
-                <div class="skill">
-                    <span>HTML/CSS</span>
-                    <div class="progress-bar" data-progress="90"></div>
-                </div>
-                <div class="skill">
-                    <span>JavaScript</span>
-                    <div class="progress-bar" data-progress="80"></div>
-                </div>
-                <div class="skill">
-                    <span>React</span>
-                    <div class="progress-bar" data-progress="75"></div>
-                </div>
-            </div>
-            <button onclick="animateSkills()">Visualize Skills</button>
-        </section>
+              </section>
 
-        <section id="projects" class="hidden">
-            <h2>Projects</h2>
-            <div id="project-carousel">
-                <div class="project active">
-                    <h3>Personal Portfolio Website</h3>
-                    <p>Responsive personal portfolio demonstrating web development skills.</p>
+            <section id="resume" class="section">
+                <div class="section-content">
+                    <h2>Objective</h2>
+                    <div class="resume-item">
+                        <h3>Senior Web Developer</h3>
+                        <p>Tech Company | 2021-Present</p>
+                        <ul>
+                            <li> To leverage my academic knowledge and technical skills to contribute effectively to the growth of the
+                                organization while gaining practical experience and advancing my career in the IT sector</li>
+                            <li>Led frontend architecture improvements</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="project hidden">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce application with payment integration.</p>
+            </section>
+
+            <section id="contact" class="section">
+                <div class="section-content">
+                    <h2>Contact Me</h2>
+                    <form id="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
-            </div>
-            <div class="carousel-controls">
-                <button onclick="prevProject()">Previous</button>
-                <button onclick="nextProject()">Next</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2024 CodeCshekhar</p>
-    </footer>
-
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
