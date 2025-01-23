@@ -12,10 +12,17 @@
             <div class="profile-section">
                 <div class="profile-image">
                 </div>
-                <h1>Chandrashekhar Wagh</h1>
-                <p>Full Stack Web Developer</p>
+                <h1>
+                    Hello. I'm <span class="highlight">Chandrashekhar Wagh</span>.
+                </h1>
+                <p class="sub-title">Full Stack Web Developer</p>
+                <p class="description">
+                    I specialize in creating high-quality, responsive websites and web applications. Let’s collaborate to bring your ideas to life!
+                </p>
+                <a href="#resume" class="btn primary-btn">This will take you to Resume section</a>
             </div>
         </header>
+        
 
         <nav>
             <div class="nav-wrapper">
@@ -62,52 +69,83 @@
                 <div class="section-content">
                   <h2>Projects</h2>
                   <div class="projects-grid">
+                    
+                    <!-- E-commerce Platform -->
                     <div class="project-card">
-                      <div class="project-image-Ecommerce">                     
-                      </div>
+                      <div class="project-image-Ecommerce"></div>
                       <h3>E-commerce Platform</h3>
-                      <p>Full-stack web application</p>
+                      <p> Created a customer management system, where I implemented
+                        SpringBoot , Hibernate JPA and integrated it with an H2 database or using MySQL</p>
                       <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
+                        <span>Springboot</span>
+                        <span>Hibernate-JPA</span>
+                        <span>Rest Services</span>
+                        <span>Jsp-Servelts</span><br>
+                        <span>JDBC</span>
+                        <span>MySQL</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/CodeCshekhar?tab=repositories" target="_blank" class="ref-button">View on GitHub</a>
                       </div>
                     </div>
+                    
                     <div class="project-card">
-                      <div class="project-image-BugTracker">
-                      </div>
-                      <h3>Task Management App</h3>
-                      <p>Productivity tracking application</p>
+                      <div class="project-image-BugTracker"></div>
+                      <h3>Bug Tracker</h3>
+                      <p>This Bug Tracker System is a Spring Boot application for managing
+                        users, priorities, and bugs. It includes RESTful APIs for CRUD operations, MySQL for data
+                        storage, and supports testing via Postman.</p>
                       <div class="project-tags">
-                        <span>JavaScript</span>
-                        <span>Firebase</span>
+                        <span>Springboot</span>
+                        <span>Hibernate-JPA</span>
+                        <span>MySQL</span>
+                      </div>
+                      <div class="project-links">
+                        <a href="https://github.com/CodeCshekhar/Bug-Tracker-Simple" target="_blank" class="ref-button">View on GitHub</a>
                       </div>
                     </div>
+
+                    <div class="project-card">
+                        <div class="project-image-RedditAppDemo"></div>
+                        <h3>Reddit App Demo</h3>
+                        <p> To implement this Reddit App, I have used a Java development
+                            environment (e.g., IntelliJ), add dependencies for OkHttp (for HTTP requests) and Jackson
+                            ( for JSON parsing), and use Reddit API credentials (client ID, secret, username, password)
+                            for OAuth2 authentication.</p>
+                        <div class="project-tags">
+                          <span>Graddle</span>
+                          <span>Reddit-API's</span>
+                          <span>OAuth2</span>
+                        </div>
+                        <div class="project-links">
+                          <a href="https://github.com/CodeCshekhar/reddit-app-demo" target="_blank" class="ref-button">View on GitHub</a>
+                        </div>
+                      </div>
+                    
                   </div>
                 </div>
               </section>
-
-            <section id="resume" class="section">
+              
+              <section id="resume" class="section resume-section">
                 <div class="section-content">
-                    <h2>Objective</h2>
-                    <div class="resume-item">
-                        <h3>Senior Web Developer</h3>
-                        <p>Tech Company | 2021-Present</p>
-                        <ul>
-                            <li> To leverage my academic knowledge and technical skills to contribute effectively to the growth of the
-                                organization while gaining practical experience and advancing my career in the IT sector</li>
-                            <li>Led frontend architecture improvements</li>
-                        </ul>
-                    </div>
+                    <h2 class="section-title">Objective</h2>
+                    <p class="resume-description">
+                        To leverage my skills as a full-stack developer to contribute to innovative projects and achieve personal and professional growth.
+                    </p>
+                    <a href="Chandrashekhar_Wagh_Resume.pdf" download="My_Resume.pdf" class="resume-btn">
+                        <button>Download The Resume</button>
+                    </a>
                 </div>
             </section>
+            
 
             <section id="contact" class="section">
                 <div class="section-content">
                     <h2>Contact Me</h2>
                     <form id="contact-form">
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Your Message" required></textarea>
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>

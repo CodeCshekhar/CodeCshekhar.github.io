@@ -186,15 +186,41 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.project-tags {
+    display: flex; /* Use flexbox for better control */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 0.5rem; /* Adjusts space between tags */
+}
+
 .project-tags span {
-    display: inline-block;
     background: rgba(255, 255, 255, 0.3);
     color: #fff;
     padding: 0.4rem 0.8rem;
-    margin-right: 0.5rem;
     border-radius: 4px;
     font-size: 0.8rem;
 }
+.project-links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .ref-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px; /* Adjust the value for desired curvature */
+    font-size: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ref-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
 
 /* Education */
 .education-item {
@@ -209,8 +235,52 @@ main {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
+.resume-section {
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradient background */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Center the section */
+}
 
-/* Contact Section */
+.resume-section .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f1c40f;
+}
+
+.resume-section .resume-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #ecf0f1;
+}
+
+.resume-section .resume-btn button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section .resume-btn button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
 #contact-form {
     max-width: 600px;
     margin: auto;
@@ -264,3 +334,4 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
+```  Let me know if you need specific tweaks!
