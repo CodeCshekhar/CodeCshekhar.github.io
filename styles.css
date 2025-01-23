@@ -1,9 +1,4 @@
 /* General Reset */
-body, html, h1, h2, h3, p, ul, li, button, input, textarea {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -15,9 +10,10 @@ body {
 }
 
 header {
-    text-align: center;
+    display: left;
+    text-align: left;
     padding: 2rem 1rem;
-    background: rgba(60, 40, 40, 0.932);
+    background: rgb(136, 104, 104);
     border-radius: 16px;
     margin: 1rem auto;
     width: 90%;
@@ -28,7 +24,7 @@ header {
 .profile-image {
     width: 150px;
     height: 150px;
-    margin: auto;
+    margin: left;
     border-radius: 50%;
     background: #cccccc00;
     background-image: url('My Image.jpg'); /* Replace with your profile image */
@@ -40,25 +36,23 @@ header {
 h1 {
     font-size: 2.5rem;
     margin: 1rem 0;
-    color: #d0d0d0;
+    color: #0f0f0f;
 }
 
 p {
-    font-size: 1rem;
-    color: #806262;
+    font-size: 1.5rem;
+    color: #434343;
 }
 
 /* Navigation */
 nav {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
 }
 
 nav button {
@@ -89,8 +83,8 @@ main {
 .section {
     margin-bottom: 3rem;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transform: translateY(30px);
@@ -103,25 +97,32 @@ main {
 }
 
 .social-links{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 1rem;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .social-icon{
-    background: linear-gradient(135deg, #485575 0%, #fda085 100%);
-    color: #fff;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #d5cfcf;
+    color: #253b77;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
     font-size: 1rem;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* About Me */
 .about-me {
-    text-align: center;
+    text-align: right;
 }
 
 .about-me h2 {
@@ -145,14 +146,15 @@ main {
 }
 
 .skill-item {
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    color: #fff;
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #d5cfcf;
+    color: #253b77;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
     font-size: 1rem;
-    font-weight: bold;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item:hover {
@@ -162,9 +164,10 @@ main {
 
 /* Projects */
 .projects-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .project-card {
@@ -236,17 +239,20 @@ main {
     margin-bottom: 0.5rem;
 }
 .resume-section {
+    display: flex;
+    flex-wrap: wrap;
     background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradient background */
     color: white;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 150px 150px;
+    text-align:left;
     border-radius: 20px;
     margin: 20px auto;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    max-width: 800px; /* Center the section */
+    max-width: 1000px; /* Center the section */
 }
 
 .resume-section .section-title {
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
@@ -256,10 +262,13 @@ main {
 }
 
 .resume-section .resume-description {
-    font-size: 1.2rem;
+    text-align: left;
+    font-size: 2rem;
     margin-bottom: 30px;
     line-height: 1.5;
+    letter-spacing: 2px;
     color: #ecf0f1;
+    max-width: 900px;
 }
 
 .resume-section .resume-btn button {
@@ -275,41 +284,33 @@ main {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .resume-section .resume-btn button:hover {
     background-color: #2980b9;
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-#contact-form {
-    max-width: 600px;
-    margin: auto;
+#contact {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 16px;
-    font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#contact-form button {
+/* Style the Contact Me link */
+.contact-link {
+    display: inline-block;
+    padding: 1rem 2rem;
     background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
     color: #fff;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increased font size for better visibility */
     border-radius: 16px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#contact-form button:hover {
+.contact-link:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

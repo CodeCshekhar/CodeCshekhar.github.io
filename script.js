@@ -27,65 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.getElementById('contact-form').addEventListener('submit', async (event) => {
+    document.getElementById('contact-form').addEventListener('submit', (event) => {
         event.preventDefault();
-    
+        
         const formData = new FormData(event.target);
-        const data = Object.fromEntries(formData.entries());
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
     
-        const response = await fetch('/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
+        // Construct the mailto link with the user's inputs
+        const mailtoLink = `mailto:cwagh2309@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
     
-        if (response.ok) {
-            alert('Message sent successfully!');
-            event.target.reset();
-        } else {
-            alert('Failed to send message. Please try again later.');
-        }
+        // Redirect to the user's email client
+        window.location.href = mailtoLink;
     });
-    const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const app = express();
-
-app.use(bodyParser.json());
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail', // Use the email service of your choice (e.g., Gmail, Outlook)
-    auth: {
-        user: 'your-email@gmail.com', // Replace with your email
-        pass: 'your-email-password', // Replace with your email password
-    },
-});
-
-app.post('/send-email', (req, res) => {
-    const { name, email, message } = req.body;
-
-    const mailOptions = {
-        from: email,
-        to: 'cwagh2309@gmail.com', // Replace with your target email
-        subject: `New message from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send('Failed to send message.');
-        } else {
-            res.status(200).send('Message sent successfully.');
-        }
-    });
-});
-
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
-});
+    
 
     // Dynamically set element heights for better responsiveness
     function adjustHeights() {
