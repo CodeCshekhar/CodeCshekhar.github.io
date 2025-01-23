@@ -290,6 +290,14 @@ main {
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
+.download-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
 #contact {
     display: flex;
@@ -335,4 +343,4 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
-```  Let me know if you need specific tweaks!
+
