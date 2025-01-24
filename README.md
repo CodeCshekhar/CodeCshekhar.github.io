@@ -2,18 +2,6 @@
 
 **Welcome to my portfolio!**
 
-This repository showcases my personal and professional projects, including:
-
-* **[Project 1 Name]:** [Short description of Project 1, e.g., "A web application for [purpose] built with [technologies]"]
-    * [Link to live project or demo]
-    * [Link to project repository]
-
-**Skills**
-
-* **Programming Languages:** [JavaScript, Java, etc]
-* **Frameworks/Libraries:** [Springboot]
-* **Tools:** [Git, IntelliJ, SQL]
-
 **Contact**
 
 * **Email:** [My Email](cwagh2309@gmail.com)
