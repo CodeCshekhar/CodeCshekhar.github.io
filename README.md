@@ -1,4 +1,4 @@
-Chandrashekhar Wagh - Portfolio
+# Chandrashekhar Wagh (CodeCshekhar)- Portfolio
 
 **Welcome to my portfolio!**
 
@@ -16,9 +16,9 @@ This repository showcases my personal and professional projects, including:
 
 **Contact**
 
-* **Email:** [cwagh2309@gmail.com]
-* **LinkedIn:** [ LinkedIn profile](https://www.linkedin.com/in/chandrashekhar-wagh-240197330/)]
-* **Website/Blog:** [My Portfolio](https://codecshekhar.github.io/)]
+* **Email:** [My Email](cwagh2309@gmail.com)
+* **LinkedIn:** [LinkedIn profile](https://www.linkedin.com/in/chandrashekhar-wagh-240197330/)
+* **Website/Blog:** [My Portfolio](https://codecshekhar.github.io/)
 
 **Contributions**
 
