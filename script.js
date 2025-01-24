@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
+    const nav = document.querySelector('nav');
+    let lastScrollTop = 0;
 
     // Scroll observer for showing sections on scroll
     const observer = new IntersectionObserver(
@@ -23,26 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const sectionId = button.getAttribute('data-section');
             const targetSection = document.getElementById(sectionId);
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         });
     });
-
-    document.getElementById('contact-form').addEventListener('submit', (event) => {
-        event.preventDefault();
-        
-        const formData = new FormData(event.target);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
     
-        // Construct the mailto link with the user's inputs
-        const mailtoLink = `mailto:cwagh2309@gmail.com?subject=Message from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+    let lastScrollPosition = 0;
+    const navbar = document.querySelector('.navbar');
     
-        // Redirect to the user's email client
-        window.location.href = mailtoLink;
+    window.addEventListener('scroll', () => {
+        const currentScrollPosition = window.scrollY;
+    
+        if (currentScrollPosition > lastScrollPosition) {
+            // User is scrolling down, hide the navbar
+            navbar.classList.add('hidden');
+        } else {
+            // User is scrolling up, show the navbar
+            navbar.classList.remove('hidden');
+        }
+    
+        lastScrollPosition = currentScrollPosition;
     });
     
-
     // Dynamically set element heights for better responsiveness
     function adjustHeights() {
         const profileImage = document.querySelector('.profile-image');
