@@ -4,21 +4,9 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #191111;
-    background: url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/dece5f124024167.60fb03546918b.gif') no-repeat center center fixed; /* Use keywords like coding, programming, or tech */
+    background: url('https://i.pinimg.com/originals/ca/e1/1d/cae11df222ff8639d02aa7b81d1d296a.gif') no-repeat center center fixed; /* Use keywords like coding, programming, or tech */
     background-size: cover; 
     overflow-x: hidden; 
-}
-
-header {
-    display: left;
-    text-align: left;
-    padding: 2rem 1rem;
-    background: rgb(136, 104, 104);
-    border-radius: 16px;
-    margin: 1rem auto;
-    width: 90%;
-    max-width: 1200px;
-    box-shadow: 0 4px 6px rgba(19, 6, 89, 0.74);
 }
 
 .profile-image {
@@ -33,15 +21,28 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header {
+    display: left;
+    text-align: left;
+    padding: 2rem 1rem;
+    background: rgba(30, 34, 42, 0.85); /* Dark, translucent background similar to code editor */
+    border-radius: 16px;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(19, 6, 89, 0.74);
+    color: #abb2bf; /* Light text color for readability */
+}
+
 h1 {
     font-size: 2.5rem;
     margin: 1rem 0;
-    color: #0f0f0f;
+    color: #61afef; /* Bright blue often used in code syntax highlighting */
 }
 
 p {
     font-size: 1.5rem;
-    color: #2a2929;
+    color: #c7ccc3; /* Soft green, common in code editor color schemes */
 }
 
 /* Navigation */
@@ -82,10 +83,11 @@ main {
 
 .section {
     margin-bottom: 3rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(40, 44, 52, 0.85); /* Dark, slightly translucent background reminiscent of code editors */
     border-radius: 15px;
     padding: 3rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #abb2bf; /* Light text color for better readability */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -351,27 +353,60 @@ main {
     cursor: pointer;
   }
 
-#contact {
-    display: inline-block;
-    justify-content: center;
+  #contact {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 2rem; /* Reduced padding */
+    background: rgba(30, 34, 42, 0.85);
+    border-radius: 20px;
+    max-width: 800px; /* Added max-width to control container size */
+    margin: 0 auto; /* Center the container */
+    width: 90%; /* Responsive width */
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #61afef;
+    margin-bottom: 1rem; /* Reduced margin */
+}
+
+#contact h4 {
+    font-size: 1.2rem;
+    color: #abb2bf;
+    max-width: 750px; /* Slightly less than container width */
+    line-height: 1.6;
+    margin-bottom: 1.5rem; /* Reduced margin */
+    padding: 0 1rem; /* Added some horizontal padding */
 }
 
 .contact-link {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 3rem; /* Increased padding for larger size */
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1.2rem; /* Increased font size for better visibility */
-    border-radius: 16px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.5rem; /* Increased font size */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    gap: 15px;
+    text-transform: uppercase; /* Optional: makes text more bold */
+    letter-spacing: 1px; /* Optional: adds some character spacing */
 }
 
 .contact-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+}
+
+.contact-link::before {
+    content: '📧'; /* Email icon */
+    font-size: 1.5rem;
 }
 
 /* Responsiveness */
