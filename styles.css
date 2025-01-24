@@ -130,8 +130,6 @@ main {
     border-radius: 20px;
   }
 
-
-/* About Me */
 .about-me {
     text-align: right;
 }
@@ -148,7 +146,6 @@ main {
     color: #555;
 }
 
-/* Skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -173,7 +170,6 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Projects */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
@@ -356,13 +352,12 @@ main {
   }
 
 #contact {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* Style the Contact Me link */
 .contact-link {
     display: inline-block;
     padding: 1rem 2rem;
