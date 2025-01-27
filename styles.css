@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #191111;
-    background: url('https://i.pinimg.com/originals/ca/e1/1d/cae11df222ff8639d02aa7b81d1d296a.gif') no-repeat center center fixed; /* Use keywords like coding, programming, or tech */
+    background: url('https://lucdn.letsupgrade.net/assets/users_count_bg_73c24b4781.gif') no-repeat center center fixed; /* Use keywords like coding, programming, or tech */
     background-size: cover; 
     overflow-x: hidden; 
 }
@@ -30,14 +30,14 @@ header {
     margin: 1rem auto;
     width: 90%;
     max-width: 1200px;
-    box-shadow: 0 4px 6px rgba(19, 6, 89, 0.74);
+    box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
     color: #abb2bf; /* Light text color for readability */
 }
 
 h1 {
     font-size: 2.5rem;
     margin: 1rem 0;
-    color: #61afef; /* Bright blue often used in code syntax highlighting */
+    color: #a5aaae; /* Bright blue often used in code syntax highlighting */
 }
 
 p {
@@ -228,7 +228,7 @@ main {
 }
 
 .project-card {
-    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    background: linear-gradient(135deg, #121514 0%, #101a25 100%);
     color: #fff;
     padding: 1.5rem;
     border-radius: 16px;
@@ -301,18 +301,19 @@ main {
 .Education-grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2rem; /* This ensures spacing between the education cards */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .Education-card {
-    background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+    background: linear-gradient(135deg, #0d1110 0%, #0f0a0a 100%);
     padding: 1rem;
     gap: 2rem;
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem; /* Added margin between each card to prevent overlap */
 }
 
 .Education-card:hover {
@@ -357,10 +358,11 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #5b86e5 0%, #36d1dc 100%);
 }
+
 .resume-section {
     display: flex;
     flex-wrap: wrap;
-    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradient background */
+    background: linear-gradient(to right, #12161a, #121e20); /* Gradient background */
     color: white;
     padding: 150px 150px;
     text-align:left;
@@ -377,7 +379,7 @@ main {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #f1c40f;
+    color: #c0bfb9;
 }
 
 .resume-section .resume-description {
@@ -421,7 +423,7 @@ main {
     align-items: center;
     text-align: center;
     padding: 2rem; /* Reduced padding */
-    background: rgba(30, 34, 42, 0.85);
+    background: rgba(21, 24, 28, 0.85);
     border-radius: 20px;
     max-width: 800px; /* Added max-width to control container size */
     margin: 0 auto; /* Center the container */
