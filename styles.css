@@ -97,41 +97,79 @@ main {
     opacity: 1;
     transform: translateY(0);
 }
-
-.social-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
-    gap: 1rem;
-    text-align: center;
-    justify-items: start;
-    margin-bottom: 1rem;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
   
-  .social-item {
-    background-color: #e1dfdf; 
-    border: 1px solid #907f7d; 
-    color: #000000; 
-    padding: 0.5rem 0.5rem;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-    font-size: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .icon {
+    text-decoration: none;
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 14px;
+    /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
   
-  .social-item:hover {
-    transform: translateY(-5px);
-    background-color: #E0E0E0; 
-    color: #000000; 
+  .icon > i {
+    color: #2dd4bf;
+    font-size: 1.5rem;
+    transition: all 0.2s;
   }
   
-  .social-icon {
-    width: 170px; /* Adjust size as needed */
-    height: 150px;
-    margin-right: 2px;
-    border-radius: 20px;
+  .icon:hover > i {
+    scale: 1.2;
+    color: #f1f1f1;
   }
-
+  
+  .icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+  }
+  
+  .icon:hover:before {
+    animation: slide 0.7s forwards;
+  }
+  
+  @keyframes slide {
+    50% {
+      left: 10%;
+      top: -40%;
+    }
+  
+    100% {
+      left: -15%;
+      top: -15%;
+    }
+  }
+  
+  .icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .icon:has(.fa-linkedin-in) {
+    --color: #0077b5;
+  }
+  .icon:has(.fa-x-twitter) {
+    --color: #141d23;
+  }
+  .icon:has(.fa-github) {
+    --color: #333;
+  }
 .about-me {
     text-align: right;
 }
@@ -353,7 +391,7 @@ main {
     cursor: pointer;
   }
 
-  #contact {
+#contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,7 +453,7 @@ main {
         font-size: 2rem;
     }
 
-    .skills-grid, .projects-grid {
+    .skills-grid, .projects-grid,.Education-grid, .resume-section, .section-contact{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
@@ -425,7 +463,7 @@ main {
         font-size: 1.5rem;
     }
 
-    .skills-grid, .projects-grid {
+    .skills-grid, .projects-grid,.Education-grid, .resume-section, .section-contact {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 }
