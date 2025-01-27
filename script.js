@@ -56,25 +56,24 @@ document.addEventListener('DOMContentLoaded', () => {
     adjustHeights();
 });
 
-// JavaScript to hide the nav on scroll down and show on scroll up (Mobile Only)
-let prevScrollpos = window.scrollY;
+// JavaScript to hide nav-wrapper when scrolling on mobile
 const navWrapper = document.querySelector('.nav-wrapper');
 
-// Check for mobile view (767px or less)
-if (window.innerWidth <= 767) {
-    window.onscroll = function () {
-        let currentScrollPos = window.scrollY;
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-        if (prevScrollpos > currentScrollPos) {
-            // User is scrolling up, show the nav
-            navWrapper.style.top = "0";
-        } else {
-            // User is scrolling down, hide the nav
-            navWrapper.style.top = "-60px"; // Adjust this value based on your nav height
-        }
+    if (currentScroll > lastScrollTop) {
+        // Scroll Down
+        navWrapper.classList.add('hidden');
+    } else {
+        // Scroll Up
+        navWrapper.classList.remove('hidden');
+    }
 
-        prevScrollpos = currentScrollPos;
-    };
-}
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll values
+});
+
+
 
 

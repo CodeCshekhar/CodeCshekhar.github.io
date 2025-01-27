@@ -223,10 +223,11 @@ main {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: space-between;
 }
 
+/* Adjust the project cards layout for smaller screens */
 .project-card {
     background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
     color: #fff;
@@ -234,6 +235,7 @@ main {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Make project cards take full width on smaller screens */
 }
 
 .project-card h3 {
@@ -241,15 +243,17 @@ main {
     font-size: 1.5rem;
 }
 
+/* Hover effect for project cards */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Project tags layout */
 .project-tags {
-    display: flex; /* Use flexbox for better control */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-    gap: 0.5rem; /* Adjusts space between tags */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .project-tags span {
@@ -259,27 +263,30 @@ main {
     border-radius: 4px;
     font-size: 0.8rem;
 }
+
+/* Project links styling */
 .project-links {
     margin-top: 1rem;
     text-align: left;
-  }
-  
+}
+
+/* GitHub button styling */
 .ref-button {
     display: inline-block;
     background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
     color: #fff;
     text-decoration: none;
     padding: 0.8rem 1.5rem;
-    border-radius: 12px; /* Adjust the value for desired curvature */
+    border-radius: 12px;
     font-size: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
 .ref-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
+}
  
 #Education.section {
     background: rgba(40, 44, 52, 0.85);
@@ -612,20 +619,17 @@ main {
         font-size: 1rem;
     }
 
-    .project-card {
-        padding: 1rem;
-    }
-
-    .project-card h3 {
-        font-size: 1.2rem;
-    }
-
-    .project-tags span {
-        font-size: 0.8rem;
+    .projects-grid {
+        flex-direction: column; /* Stack project cards vertically */
     }
 
     .project-card {
-        box-shadow: none; /* Reduce box-shadow on smaller devices */
+        margin-bottom: 1.5rem; /* Add space between stacked cards */
+    }
+
+    .projects-container {
+        padding-left: 0;
+        padding-right: 0;
     }
     
     .section {
@@ -693,7 +697,7 @@ main {
         padding: 1.5rem;
     }
 
-    .project-card, .Education-card {
+    .Education-card {
         margin-bottom: 1rem;
     }
 
