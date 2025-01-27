@@ -546,6 +546,20 @@ main {
 
 /* Mobile View (up to 767px) */
 @media screen and (max-width: 767px) {
+
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: top 0.3s; /* Smooth transition */
+    }
+
+    body {
+        padding-top: 60px; /* Adjust this value based on the height of your nav */
+    }
+
     header {
         flex-direction: column;
         text-align: center;
@@ -569,22 +583,39 @@ main {
         max-width: 300px;
         margin-bottom: 0.5rem;
     }
-    .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr; /* Single column for better mobile readability */
-        gap: 1.5rem; /* Adjust gap to fit the smaller screen */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .about-content img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
     }
 
     .project-card {
-        padding: 1rem; /* Reduce padding for mobile */
+        padding: 1rem;
     }
 
     .project-card h3 {
-        font-size: 1.3rem; /* Smaller heading for mobile */
+        font-size: 1.2rem;
     }
 
     .project-tags span {
-        font-size: 0.7rem; /* Adjust tag font size */
+        font-size: 0.8rem;
+    }
+
+    .project-card {
+        box-shadow: none; /* Reduce box-shadow on smaller devices */
     }
     
     .section {
