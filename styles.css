@@ -230,11 +230,11 @@ main {
 .project-card {
     background: linear-gradient(135deg, #121514 0%, #101a25 100%);
     color: #fff;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 30%; /* Default to 3 columns for larger screens */
+    width: 20%; /* Default to 3 columns for larger screens */
     min-width: 280px; /* Prevent cards from becoming too small */
     margin: 0 auto; /* Center each card within the grid */
 }
