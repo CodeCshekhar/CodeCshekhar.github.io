@@ -271,67 +271,78 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
  
-  .Education-grid {
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+#Education.section {
+    background: rgba(40, 44, 52, 0.85);
+    padding: 3rem 2rem;
     gap: 2rem;
+    border-radius: 15px;
+}
+
+#Education h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.Education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Education-card {
     background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
-    color: #fff;
-    padding: 1.5rem;
+    padding: 1rem;
+    gap: 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 1rem;
-}
-
-.Education-card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.Education-card h3 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.8rem;
+}
+
+.Education-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
 .Education-links {
-    margin-top: 1rem;
-    text-align: left;
-  }
-  
-  .ref-button {
-    display: inline-block;
-    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
-    color: #fff;
-    text-decoration: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 12px; /* Adjust the value for desired curvature */
-    font-size: 1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .ref-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-/* Education */
-.education-item {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
 }
 
-.education-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.ref-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ref-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #5b86e5 0%, #36d1dc 100%);
 }
 .resume-section {
     display: flex;
@@ -448,22 +459,180 @@ main {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 2rem 3rem;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .projects-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .resume-section {
+        padding: 150px 150px;
+    }
+
+    nav {
+        padding: 1.5rem 2rem;
+    }
+}
+
+/* Tablet View (768px to 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    #Education h2 {
+        font-size: 2.2rem;
+    }
+
+    .Education-grid {
+        padding: 0.5rem;
+    }
+
+    .Education-card {
+        padding: 2.5rem;
+        width: 95%;
+    }
+
+    .Education-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .resume-section {
+        padding: 100px 75px;
+    }
+
+    nav {
+        padding: 1rem 1.5rem;
+    }
+
     h1 {
         font-size: 2rem;
     }
 
-    .skills-grid, .projects-grid,.Education-grid, .resume-section, .section-contact{
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .section {
+        padding: 2rem;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
+/* Mobile View (up to 767px) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
     }
 
-    .skills-grid, .projects-grid,.Education-grid, .resume-section, .section-contact {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem;
+    }
+
+    nav button {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 0.5rem;
+    }
+
+    .projects-grid, .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    #Education.section {
+        padding: 2rem 1rem;
+    }
+
+    #Education h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .Education-grid {
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .Education-card {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .Education-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .Education-card p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ref-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .resume-section {
+        padding: 50px 25px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .section {
+        padding: 1.5rem;
+    }
+
+    .project-card, .Education-card {
+        margin-bottom: 1rem;
+    }
+
+    .contact-link {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        gap: 1rem;
     }
 }
