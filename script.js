@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach((section) => observer.observe(section));
 
-    // Smooth scrolling for navigation buttons
     const navButtons = document.querySelectorAll('nav button');
     navButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollPosition = currentScrollPosition;
     });
     
-    // Dynamically set element heights for better responsiveness
     function adjustHeights() {
         const profileImage = document.querySelector('.profile-image');
         profileImage.style.height = `${profileImage.offsetWidth}px`;
@@ -57,3 +55,21 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', adjustHeights);
     adjustHeights();
 });
+
+let prevScrollpos = window.scrollY; // Use scrollY instead of pageYOffset
+const navWrapper = document.querySelector('.nav-wrapper');
+
+// Check for mobile view (767px or less)
+if (window.innerWidth <= 767) {
+    window.onscroll = function () {
+        let currentScrollPos = window.scrollY; // Use scrollY instead of pageYOffset
+        if (prevScrollpos > currentScrollPos) {      
+            navWrapper.style.top = "0";
+        } else {
+            navWrapper.style.top = "-60px"; // Adjust this value based on your nav height
+        }
+
+        prevScrollpos = currentScrollPos;
+    };
+}
+
