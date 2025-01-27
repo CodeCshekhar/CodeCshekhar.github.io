@@ -223,8 +223,8 @@ main {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: space-between;  /* Ensure proper spacing on larger screens */
 }
 
 .project-card {
@@ -234,8 +234,8 @@ main {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;  /* Ensure cards don't overflow */
-    margin: 10px 0; /* Ensure cards have spacing between them */
+    width: 30%; /* Default to 3 columns for larger screens */
+    min-width: 280px; /* Prevent cards from becoming too small */
 }
 
 .project-card h3 {
@@ -248,7 +248,6 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Tags Flexbox */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -263,7 +262,6 @@ main {
     font-size: 0.8rem;
 }
 
-/* Links Button */
 .project-links {
     margin-top: 1rem;
     text-align: left;
@@ -486,14 +484,15 @@ main {
         width: 180px;
         height: 180px;
     }
-
     .projects-grid {
-        display: block; /* Stack the projects vertically on smaller screens */
+        display: flex;
+        flex-direction: column; /* Stack the project cards vertically */
+        gap: 1rem; /* Add spacing between stacked items */
     }
 
     .project-card {
-        width: 100%; /* Ensure each project card takes full width */
-        margin: 1rem 0; /* Add margin to separate the cards */
+        width: 100%; /* Ensure each card takes up full width */
+        margin: 1rem 0; /* Add margin to separate cards */
     }
 
     .project-tags {
@@ -501,12 +500,12 @@ main {
     }
 
     .project-card h3 {
-        font-size: 1.3rem; /* Reduce font size for smaller screens */
+        font-size: 1.3rem;
     }
 
     .ref-button {
-        font-size: 0.9rem; /* Slightly smaller button text */
-        padding: 0.6rem 1.2rem; /* Adjust button padding */
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
     }
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
@@ -634,16 +633,27 @@ main {
     }
 
     .projects-grid {
-        flex-direction: column; /* Stack project cards vertically */
+        display: flex;
+        flex-direction: column; /* Stack the project cards vertically */
+        gap: 1rem; /* Add spacing between stacked items */
     }
 
     .project-card {
-        margin-bottom: 1.5rem; /* Add space between stacked cards */
+        width: 100%; /* Ensure each card takes up full width */
+        margin: 1rem 0; /* Add margin to separate cards */
     }
 
-    .projects-container {
-        padding-left: 0;
-        padding-right: 0;
+    .project-tags {
+        justify-content: flex-start;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .ref-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
     }
     
     .section {
@@ -722,5 +732,19 @@ main {
 
     .wrapper {
         gap: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-tags span {
+        font-size: 0.7rem;
+    }
+
+    .ref-button {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
 }
