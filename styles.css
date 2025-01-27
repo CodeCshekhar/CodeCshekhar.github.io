@@ -569,8 +569,29 @@ main {
         max-width: 300px;
         margin-bottom: 0.5rem;
     }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column for better mobile readability */
+        gap: 1.5rem; /* Adjust gap to fit the smaller screen */
+    }
 
-    .projects-grid, .skills-grid {
+    .project-card {
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem; /* Smaller heading for mobile */
+    }
+
+    .project-tags span {
+        font-size: 0.7rem; /* Adjust tag font size */
+    }
+    
+    .section {
+        padding: 1.5rem; /* Reduce padding for mobile view */
+    }
+
+    .skills-grid {
         display: flex;
         grid-template-columns: 1fr;
         gap: 1rem;
