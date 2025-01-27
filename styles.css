@@ -223,11 +223,10 @@ main {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    justify-content: space-between;
 }
 
-/* Adjust the project cards layout for smaller screens */
 .project-card {
     background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
     color: #fff;
@@ -235,7 +234,8 @@ main {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%; /* Make project cards take full width on smaller screens */
+    width: 100%;  /* Ensure cards don't overflow */
+    margin: 10px 0; /* Ensure cards have spacing between them */
 }
 
 .project-card h3 {
@@ -243,13 +243,12 @@ main {
     font-size: 1.5rem;
 }
 
-/* Hover effect for project cards */
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Project tags layout */
+/* Tags Flexbox */
 .project-tags {
     display: flex;
     flex-wrap: wrap;
@@ -264,13 +263,12 @@ main {
     font-size: 0.8rem;
 }
 
-/* Project links styling */
+/* Links Button */
 .project-links {
     margin-top: 1rem;
     text-align: left;
 }
 
-/* GitHub button styling */
 .ref-button {
     display: inline-block;
     background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
@@ -489,10 +487,26 @@ main {
         height: 180px;
     }
 
-    .projects-grid{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+    .projects-grid {
+        display: block; /* Stack the projects vertically on smaller screens */
+    }
+
+    .project-card {
+        width: 100%; /* Ensure each project card takes full width */
+        margin: 1rem 0; /* Add margin to separate the cards */
+    }
+
+    .project-tags {
+        justify-content: flex-start;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem; /* Reduce font size for smaller screens */
+    }
+
+    .ref-button {
+        font-size: 0.9rem; /* Slightly smaller button text */
+        padding: 0.6rem 1.2rem; /* Adjust button padding */
     }
     .skills-grid {
         grid-template-columns: repeat(4, 1fr);
