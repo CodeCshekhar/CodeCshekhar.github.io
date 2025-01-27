@@ -254,7 +254,7 @@ main {
     text-align: left;
   }
   
-  .ref-button {
+.ref-button {
     display: inline-block;
     background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
     color: #fff;
@@ -266,7 +266,7 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .ref-button:hover {
+.ref-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   }
@@ -571,7 +571,7 @@ main {
     }
 
     .projects-grid, .skills-grid {
-        display: grid;
+        display: flex;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
