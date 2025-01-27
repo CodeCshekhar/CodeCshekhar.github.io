@@ -224,7 +224,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-between;  /* Ensure proper spacing on larger screens */
+    justify-content: center;  /* Center the items in the grid */
 }
 
 .project-card {
@@ -236,6 +236,7 @@ main {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 30%; /* Default to 3 columns for larger screens */
     min-width: 280px; /* Prevent cards from becoming too small */
+    margin: 0 auto; /* Center each card within the grid */
 }
 
 .project-card h3 {
@@ -487,14 +488,11 @@ main {
         height: 180px;
     }
     .projects-grid {
-        display: flex;
-        flex-direction: column; /* Stack the project cards vertically */
-        gap: 1rem; /* Add spacing between stacked items */
+        justify-content: center; /* Ensure proper alignment */
     }
 
     .project-card {
-        width: 100%; /* Ensure each card takes up full width */
-        margin: 1rem 0; /* Add margin to separate cards */
+        width: 20%; /* 3 cards per row on desktop */
     }
 
     .project-tags {
@@ -537,6 +535,9 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+    }
+    .project-card {
+        width: 45%; /* 2 cards per row on tablets */
     }
     #Education h2 {
         font-size: 2.2rem;
@@ -641,8 +642,7 @@ main {
     }
 
     .project-card {
-        width: 100%; /* Ensure each card takes up full width */
-        margin: 1rem 0; /* Add margin to separate cards */
+        width: 100%; /* 1 card per row on mobile */
     }
 
     .project-tags {
