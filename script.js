@@ -56,20 +56,25 @@ document.addEventListener('DOMContentLoaded', () => {
     adjustHeights();
 });
 
-let prevScrollpos = window.scrollY; // Use scrollY instead of pageYOffset
+// JavaScript to hide the nav on scroll down and show on scroll up (Mobile Only)
+let prevScrollpos = window.scrollY;
 const navWrapper = document.querySelector('.nav-wrapper');
 
 // Check for mobile view (767px or less)
 if (window.innerWidth <= 767) {
     window.onscroll = function () {
-        let currentScrollPos = window.scrollY; // Use scrollY instead of pageYOffset
-        if (prevScrollpos > currentScrollPos) {      
+        let currentScrollPos = window.scrollY;
+
+        if (prevScrollpos > currentScrollPos) {
+            // User is scrolling up, show the nav
             navWrapper.style.top = "0";
         } else {
+            // User is scrolling down, hide the nav
             navWrapper.style.top = "-60px"; // Adjust this value based on your nav height
         }
 
         prevScrollpos = currentScrollPos;
     };
 }
+
 
