@@ -365,7 +365,7 @@ main {
     flex-wrap: wrap;
     background: linear-gradient(to right, #12161a, #121e20); /* Gradient background */
     color: white;
-    padding: 5px 5px;
+    padding: 3px 3px;
     text-align:left;
     border-radius: 20px;
     margin: 20px auto;
@@ -375,9 +375,9 @@ main {
 
 .resume-section .section-title {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #c0bfb9;
@@ -385,12 +385,12 @@ main {
 
 .resume-section .resume-description {
     text-align: left;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 3px;
-    line-height: 1.5;
+    line-height: 2;
     letter-spacing: 2px;
     color: #ecf0f1;
-    max-width: 90px;
+    max-width: 120px;
 }
 
 .resume-section .download-btn button {
