@@ -535,23 +535,33 @@ main {
 
 /* Mobile View (up to 767px) */
 @media screen and (max-width: 767px) {
-    /* General Styling */
-    body {
-      padding-top: 0; /* Remove padding-top for hidden navbar */
-      overflow-x: hidden; /* Prevent horizontal scrollbars */
+/* General Styling */
+body {
+    padding-top: 0;
+    overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f9f9f9;
     }
   
-    /* Header & Navigation */
+    /* Hide Navbar on Mobile */
     .nav-wrapper {
-      display: none; /* Hide navbar in mobile view */
+      display: none;
     }
   
+    /* Center Align Header & Navigation */
     header {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
       padding: 1rem;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
     }
   
     .profile-image {
@@ -566,10 +576,13 @@ main {
       flex-direction: column;
       align-items: center;
       padding: 0.8rem;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
   
     nav button {
-      width: 100%;
+      width: 90%;
       max-width: 300px;
       margin-bottom: 0.5rem;
       padding: 1rem 2rem;
@@ -582,6 +595,9 @@ main {
       flex-direction: column;
       align-items: center;
       gap: 1.5rem;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
     }
   
     .about-content img {
@@ -603,10 +619,14 @@ main {
     .section {
       padding: 2rem 1rem;
       text-align: center;
+      width: 100%;
     }
   
     .section-container {
       padding: 0 15px;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
     }
   
     /* Projects Section */
@@ -615,6 +635,9 @@ main {
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
     }
   
     .projects-grid {
@@ -622,6 +645,7 @@ main {
       flex-direction: column;
       align-items: center;
       gap: 1rem;
+      width: 100%;
     }
   
     .project-card {
@@ -665,12 +689,9 @@ main {
       flex-direction: column;
       align-items: center;
       text-align: center;
-    }
-  
-    #Education.section {
-      padding: 2rem 0;
       width: 100%;
-      overflow: hidden;
+      max-width: 100vw;
+      box-sizing: border-box;
     }
   
     .Education-grid {
@@ -682,7 +703,7 @@ main {
     }
   
     .Education-card {
-      width: 100%;
+      width: 90%;
       max-width: 320px;
       margin: 0 auto;
       padding: 1.5rem;
@@ -734,9 +755,20 @@ main {
     .wrapper {
       gap: 1rem;
     }
+  
+    /* Make everything aligned perfectly */
+    .section-container,
+    .projects-grid,
+    .Education-grid,
+    .about-content {
+      width: 100%;
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
   }
   
   @media screen and (max-width: 480px) {
+    /* Minor adjustments for very small screens */
     .projects-grid,
     .Education-grid {
       padding: 0 10px;
@@ -747,12 +779,9 @@ main {
       max-width: 300px;
     }
   
-    .section-container {
-      padding: 0 15px;
-    }
-  
     .ref-button {
       font-size: 0.85rem;
       padding: 0.5rem 1rem;
     }
   }
+  
