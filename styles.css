@@ -537,20 +537,13 @@ main {
 @media screen and (max-width: 767px) {
     /* General Styling */
     body {
-      padding-top: 60px; /* Adjust based on nav height */
+      padding-top: 0; /* Remove padding-top for hidden navbar */
       overflow-x: hidden; /* Prevent horizontal scrollbars */
     }
   
     /* Header & Navigation */
     .nav-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      background-color: #fff; /* Add background color for better visibility */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-      transition: top 0.3s ease-in-out; /* Smoother transition */
+      display: none; /* Hide navbar in mobile view */
     }
   
     header {
@@ -564,7 +557,7 @@ main {
     .profile-image {
       width: 120px;
       height: 120px;
-      border-radius: 50%; /* Make image circular */
+      border-radius: 50%;
       margin: 0 auto 1rem;
     }
   
@@ -579,8 +572,8 @@ main {
       width: 100%;
       max-width: 300px;
       margin-bottom: 0.5rem;
-      padding: 1rem 2rem; /* Increase button padding for better tap targets */
-      border-radius: 5px; /* Add border radius for visual appeal */
+      padding: 1rem 2rem;
+      border-radius: 5px;
     }
   
     /* About Section */
@@ -594,7 +587,7 @@ main {
     .about-content img {
       width: 150px;
       height: 150px;
-      border-radius: 50%; /* Make image circular */
+      border-radius: 50%;
     }
   
     .about-text h3 {
@@ -603,17 +596,17 @@ main {
   
     .about-text p {
       font-size: 1rem;
-      line-height: 1.5; /* Improve readability */
+      line-height: 1.5;
     }
   
     /* General Section Styling */
     .section {
-      padding: 2rem 1.5rem; /* Adjust padding for 16:9 aspect ratio */
+      padding: 2rem 1rem;
       text-align: center;
     }
   
     .section-container {
-      padding: 0 20px; /* Adjust padding for 16:9 aspect ratio */
+      padding: 0 15px;
     }
   
     /* Projects Section */
@@ -634,9 +627,9 @@ main {
     .project-card {
       width: 90%;
       max-width: 400px;
-      padding: 1.5rem; /* Add padding to project cards */
-      border: 1px solid #ccc; /* Add subtle border for better separation */
-      border-radius: 5px; /* Add border radius for visual appeal */
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
   
     .ref-button {
@@ -644,7 +637,7 @@ main {
       display: inline-block;
       padding: 0.8rem 1.5rem;
       font-size: 0.9rem;
-      border-radius: 3px; /* Add border radius for visual appeal */
+      border-radius: 3px;
     }
   
     .project-card h3 {
@@ -662,8 +655,8 @@ main {
     .project-tags span {
       margin: 0.25rem;
       padding: 0.2rem 0.5rem;
-      border-radius: 3px; /* Add border radius for visual appeal */
-      background-color: #f0f0f0; /* Add subtle background color */
+      border-radius: 3px;
+      background-color: #f0f0f0;
     }
   
     /* Education Section */
@@ -675,7 +668,7 @@ main {
     }
   
     #Education.section {
-      padding: 2rem 1.5rem; /* Adjust padding for 16:9 aspect ratio */
+      padding: 2rem 0;
       width: 100%;
       overflow: hidden;
     }
@@ -692,9 +685,9 @@ main {
       width: 100%;
       max-width: 320px;
       margin: 0 auto;
-      padding: 1.5rem; /* Add padding to education cards */
-      border: 1px solid #ccc; /* Add subtle border for better separation */
-      border-radius: 5px; /* Add border radius for visual appeal */
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
   
     #Education h2 {
@@ -709,7 +702,7 @@ main {
   
     .Education-card p {
       font-size: 1rem;
-      line-height: 1.5; /* Improve readability */
+      line-height: 1.5;
       margin-bottom: 1.5rem;
     }
   
@@ -724,7 +717,7 @@ main {
   
     /* Resume Section */
     .resume-section {
-      padding: 40px 20px; /* Reduced padding for better mobile view */
+      padding: 40px 20px;
     }
   
     /* Contact Section */
@@ -735,7 +728,7 @@ main {
     .contact-link {
       padding: 1rem 2rem;
       font-size: 1.2rem;
-      border-radius: 5px; /* Add border radius for visual appeal */
+      border-radius: 5px;
     }
   
     .wrapper {
@@ -746,7 +739,7 @@ main {
   @media screen and (max-width: 480px) {
     .projects-grid,
     .Education-grid {
-      padding: 0 15px; /* Adjust padding for 16:9 aspect ratio */
+      padding: 0 10px;
     }
   
     .project-card,
@@ -755,7 +748,7 @@ main {
     }
   
     .section-container {
-      padding: 0 20px; /* Adjust padding for 16:9 aspect ratio */
+      padding: 0 15px;
     }
   
     .ref-button {
