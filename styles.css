@@ -635,18 +635,24 @@ main {
         font-size: 1rem;
     }
 
+    .section {
+        padding: 2rem 1rem; /* Adjusted padding for better spacing */
+        text-align: center; /* Center align text */
+    }
+
+    /* Projects grid adjustments for mobile */
     .projects-grid {
         display: flex;
         flex-direction: column; /* Stack the project cards vertically */
-        gap: 1rem; /* Add spacing between stacked items */
+        gap: 1.5rem; /* Add spacing between stacked items */
+        align-items: center; /* Center align project cards */
     }
 
     .project-card {
-        width: 100%; /* 1 card per row on mobile */
-    }
-
-    .project-tags {
-        justify-content: flex-start;
+        width: 90%; /* Slightly less than full width for better aesthetics */
+        max-width: 320px; /* Maximum width for larger mobile screens */
+        margin: 0 auto; /* Center the card */
+        padding: 1rem; /* Adjusted padding */
     }
 
     .project-card h3 {
@@ -676,7 +682,7 @@ main {
     }
 
     #Education.section {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem; /* Adjusted padding */
     }
 
     #Education h2 {
@@ -685,13 +691,15 @@ main {
     }
 
     .Education-grid {
-        gap: 2rem;
+        gap: 1.5rem; /* Adjusted gap between cards */
         padding: 0;
     }
 
     .Education-card {
         padding: 1.5rem;
-        width: 100%;
+        width: 90%; /* Slightly less than full width for better aesthetics */
+        max-width: 320px; /* Maximum width for larger mobile screens */
+        margin: 0 auto; /* Center the card */
     }
 
     .Education-card h3 {
@@ -707,7 +715,7 @@ main {
     .ref-button {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
-        width: 100%;
+        width: 100%; /* Full width for better touch targets */
         text-align: center;
     }
 

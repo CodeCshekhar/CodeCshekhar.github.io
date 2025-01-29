@@ -1,7 +1,9 @@
+let lastScrollPosition = 0; // Define globally to share across event listeners
+
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const nav = document.querySelector('nav');
-    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
 
     // Scroll observer for showing sections on scroll
     const observer = new IntersectionObserver(
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach((section) => observer.observe(section));
 
+    // Smooth scrolling with centering
     const navButtons = document.querySelectorAll('nav button');
     navButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -29,51 +32,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
-    let lastScrollPosition = 0;
-    const navbar = document.querySelector('.navbar');
-    
+
+    // Hide/show navbar on scroll
     window.addEventListener('scroll', () => {
         const currentScrollPosition = window.scrollY;
-    
-        if (currentScrollPosition > lastScrollPosition) {
-            // User is scrolling down, hide the navbar
-            navbar.classList.add('hidden');
-        } else {
-            // User is scrolling up, show the navbar
-            navbar.classList.remove('hidden');
+
+        if (navbar) { // Check if navbar exists
+            if (currentScrollPosition > lastScrollPosition) {
+                // User is scrolling down, hide the navbar
+                navbar.classList.add('hidden');
+            } else {
+                // User is scrolling up, show the navbar
+                navbar.classList.remove('hidden');
+            }
         }
-    
+
         lastScrollPosition = currentScrollPosition;
     });
-    
+
+    // Adjust profile image height dynamically
     function adjustHeights() {
         const profileImage = document.querySelector('.profile-image');
-        profileImage.style.height = `${profileImage.offsetWidth}px`;
+        if (profileImage) {
+            profileImage.style.height = `${profileImage.offsetWidth}px`;
+        }
     }
 
     window.addEventListener('resize', adjustHeights);
     adjustHeights();
 });
 
-// JavaScript to hide nav-wrapper when scrolling on mobile
+// Hide nav-wrapper when scrolling on mobile
 const navWrapper = document.querySelector('.nav-wrapper');
 
-let lastScrollTop = 0;
-window.addEventListener('scroll', function() {
-    let currentScroll = window.scrollY || document.documentElement.scrollTop;
+if (navWrapper) { // Check if navWrapper exists
+    window.addEventListener('scroll', function () {
+        let currentScroll = window.scrollY || document.documentElement.scrollTop;
 
-    if (currentScroll > lastScrollTop) {
-        // Scroll Down
-        navWrapper.classList.add('hidden');
-    } else {
-        // Scroll Up
-        navWrapper.classList.remove('hidden');
-    }
+        if (currentScroll > lastScrollPosition) {
+            // Scroll Down
+            navWrapper.classList.add('hidden');
+        } else {
+            // Scroll Up
+            navWrapper.classList.remove('hidden');
+        }
 
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative scroll values
-});
-
-
-
-
+        lastScrollPosition = Math.max(currentScroll, 0); // Prevent negative scroll values
+    });
+}
