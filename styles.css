@@ -502,12 +502,12 @@ main {
 @media screen and (max-width: 768px) {
     .projects-grid, .Education-grid {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
     }
 
     .project-card, .Education-card {
-        width: 100%;
+        width: 30%;
         margin-bottom: 1.5rem;
     }
 
