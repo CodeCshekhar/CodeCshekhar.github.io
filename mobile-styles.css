@@ -89,7 +89,7 @@ p {
         font-size: 1rem;
         max-width: 500px;
         width: 100%;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .project-card h3, .Education-card h3 {
@@ -97,6 +97,11 @@ p {
         margin-bottom: 1rem;
     }
 
+    .Education-card p {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+    
     .project-tags {
         font-size: 1rem;
     }

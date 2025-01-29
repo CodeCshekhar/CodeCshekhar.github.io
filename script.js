@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-    // Adjust profile image height dynamically
     function adjustHeights() {
         const profileImage = document.querySelector('.profile-image');
         if (profileImage) {
