@@ -328,7 +328,7 @@ main {
 .Education-grid {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -341,7 +341,7 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .Education-card:hover {
@@ -362,7 +362,7 @@ main {
     color: rgba(255, 255, 255, 0.9);
     margin-top: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .Education-links {
@@ -380,7 +380,7 @@ main {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
-    margin: 20px auto;
+    margin: 30px auto;
     box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
     max-width: 1000px;
 }
@@ -430,6 +430,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 1.1rem;
     padding: 2rem;
     background: rgba(21, 24, 28, 0.85);
     box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
@@ -437,6 +438,10 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     width: 90%;
+}
+
+#contact h2{
+    font-size: 1.7rem;
 }
 
 .contact-link {
@@ -447,7 +452,6 @@ main {
     background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.5rem;
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
