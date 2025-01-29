@@ -1,0 +1,172 @@
+/* Mobile Styles */
+
+/* General Reset for Mobile */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #191111;
+    background: url('https://lucdn.letsupgrade.net/assets/users_count_bg_73c24b4781.gif') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    margin: left;
+    border-radius: 50%;
+    background: #cccccc00;
+    background-image: url('My Image.jpg'); /* Replace with your profile image */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: block;
+    text-align: left;
+    padding: 2rem 1rem;
+    background: rgba(30, 34, 42, 0.85);
+    border-radius: 16px;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
+    color: #abb2bf;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: #a5aaae;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #c7ccc3;
+}
+
+/* Hide Navbar when Scrolling */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none; /* Hide the navbar on scroll */
+    }
+
+    nav.fixed {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+
+    .wrapper {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .icon {
+        margin-bottom: 10px;
+    }
+
+    .icon > i {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive Project and Education Cards */
+@media screen and (max-width: 768px) {
+    .projects-grid, .Education-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-card, .Education-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .project-card h3, .Education-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-tags {
+        font-size: 0.9rem;
+    }
+
+    .project-links, .Education-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Adjusting the Resume Section */
+@media screen and (max-width: 768px) {
+    .resume-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .resume-section .section-title {
+        font-size: 2rem;
+    }
+
+    .resume-section .resume-description {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .resume-section .download-btn button {
+        padding: 10px 20px;
+    }
+}
+
+/* Adjust Contact Section */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 1.5rem;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .contact-link {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact-link::before {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styling for Skills Container */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .skill-box {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+/* Media Query for Font Size Adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
