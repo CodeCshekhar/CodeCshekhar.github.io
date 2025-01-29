@@ -507,6 +507,8 @@ main {
     }
 
     .project-card, .Education-card {
+        display: flex;
+        flex-direction: row;
         width: 30%;
         margin-bottom: 1.5rem;
     }
