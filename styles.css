@@ -237,8 +237,8 @@ main {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    gap: 1.5rem;
+    justify-content:space-evenly;
     width: 100%;
     box-sizing: border-box;
 }
@@ -250,7 +250,7 @@ main {
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: calc(33.33% - 2rem);
+    width: 31%;
     min-width: 280px;
     box-sizing: border-box;
 }
@@ -303,14 +303,13 @@ main {
 #Education.section {
     background: rgba(40, 44, 52, 0.85);
     padding: 3rem 2rem;
-    gap: 2rem;
     border-radius: 15px;
 }
 
 #Education h2 {
     color: #fff;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-align: left;
 }
 
@@ -330,6 +329,7 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     box-sizing: border-box;
+    margin-bottom: 1rem; /* Adds space between cards */
 }
 
 .Education-card:hover {
@@ -377,19 +377,22 @@ main {
 
 .resume-section {
     display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
     flex-wrap: wrap;
     background: linear-gradient(to right, #12161a, #121e20); /* Gradient background */
     color: white;
-    padding: 3px 3px;
-    text-align:left;
+    padding: 20px; /* Increased padding for better spacing */
+    text-align: center; /* Center text by default */
     border-radius: 20px;
     margin: 20px auto;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    max-width: 700px; /* Center the section */
+    max-width: 1000px; /* Center the section */
 }
 
 .resume-section .section-title {
-    text-align: left;
+    text-align: center; /* Center the title */
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 30px;
@@ -399,13 +402,13 @@ main {
 }
 
 .resume-section .resume-description {
-    text-align: left;
-    font-size: 3rem;
-    margin-bottom: 3px;
-    line-height: 2;
-    letter-spacing: 2px;
+    text-align: center; /* Center the description */
+    font-size: 1.5rem; /* Adjusted font size for better readability */
+    margin-bottom: 20px; /* Adjusted margin for better spacing */
+    line-height: 1.6; /* Adjusted line height */
+    letter-spacing: 1px;
     color: #ecf0f1;
-    max-width: 120px;
+    max-width: 800px; /* Adjusted max-width for better readability */
 }
 
 .resume-section .download-btn button {
@@ -425,57 +428,40 @@ main {
     background-color: #2980b9;
     transform: scale(1.1);
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+}
 
 #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Ensure vertical centering */
     text-align: center;
-    padding: 2rem; /* Reduced padding */
+    padding: 2rem;
     background: rgba(21, 24, 28, 0.85);
     border-radius: 20px;
-    max-width: 1000px; /* Added max-width to control container size */
+    max-width: 1000px;
     margin: 0 auto; /* Center the container */
-    width: 90%; /* Responsive width */
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    color: #61afef;
-    margin-bottom: 1rem; /* Reduced margin */
-}
-
-#contact h4 {
-    font-size: 1.2rem;
-    color: #abb2bf;
-    max-width: 750px; /* Slightly less than container width */
-    line-height: 1.6;
-    margin-bottom: 1.5rem; /* Reduced margin */
-    padding: 0 1rem; /* Added some horizontal padding */
+    width: 90%;
 }
 
 .contact-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem 3rem; /* Increased padding for larger size */
+    padding: 1.5rem 3rem;
     background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.5rem; /* Increased font size */
+    font-size: 1.5rem;
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     gap: 15px;
-    text-transform: uppercase; /* Optional: makes text more bold */
-    letter-spacing: 1px; /* Optional: adds some character spacing */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; /* Ensures text is centered */
+    width: fit-content; /* Prevents stretching */
+    margin: 0 auto; /* Center horizontally */
 }
 
 .contact-link:hover {
@@ -485,55 +471,10 @@ main {
 }
 
 .contact-link::before {
-    content: '📧'; /* Email icon */
+    content: '📧';
     font-size: 1.5rem;
 }
 
-/* Responsiveness */
-@media screen and (min-width: 1024px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 2rem 3rem;
-    }
-
-    .profile-image {
-        width: 180px;
-        height: 180px;
-    }
-    .projects-grid {
-        justify-content: center; /* Ensure proper alignment */
-    }
-
-    .project-card {
-        width: 20%; /* 3 cards per row on desktop */
-    }
-
-    .project-tags {
-        justify-content: flex-start;
-    }
-
-    .project-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .ref-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-    .skills-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .resume-section {
-        padding: 150px 150px;
-    }
-
-    nav {
-        padding: 1.5rem 2rem;
-    }
-}
 
 /* Tablet View (768px to 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -594,206 +535,231 @@ main {
 
 /* Mobile View (up to 767px) */
 @media screen and (max-width: 767px) {
-
-    .nav-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        transition: top 0.3s; /* Smooth transition */
-    }
-
+    /* General Styling */
     body {
-        padding-top: 60px; /* Adjust this value based on the height of your nav */
+      padding-top: 60px; /* Adjust based on nav height */
+      overflow-x: hidden; /* Prevent horizontal scrollbars */
     }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 1rem;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.8rem;
-    }
-
-    nav button {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 0.5rem;
-    }
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .about-content img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-text h3 {
-        font-size: 1.6rem;
-    }
-
-    .about-text p {
-        font-size: 1rem;
-    }
-
-    .section {
-        padding: 1.5rem;
-    }
-
-    .section-container {
-        padding: 0 10px;
-    }
-
-    .project-card {
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .projects-grid {
-        padding: 0;
-    }
-
-    .Education-card {
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-    }
-
-    .ref-button {
-        width: auto;
-        display: inline-block;
-    }
-
-    .project-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .ref-button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-    
-    .section {
-        padding: 1.5rem; /* Reduce padding for mobile view */
-    }
-
-    .skills-container {
-        justify-content: center; /* Center align items on mobile */
-    }
-
-    .skill-box {
-        flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
-    }
-
-    /* Hide nav wrapper in mobile view */
+  
+    /* Header & Navigation */
     .nav-wrapper {
-        display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #fff; /* Add background color for better visibility */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+      transition: top 0.3s ease-in-out; /* Smoother transition */
     }
-
-    #Education h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+  
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
     }
-
-    #Education.section {
-        padding: 2rem 0;
-        width: 100%;
-        overflow: hidden;
-    } 
-
-    .Education-card h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+  
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%; /* Make image circular */
+      margin: 0 auto 1rem;
     }
-
-    .Education-card p {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.8rem;
     }
-
-    .ref-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-        width: 100%; /* Full width for better touch targets */
-        text-align: center;
+  
+    nav button {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 0.5rem;
+      padding: 1rem 2rem; /* Increase button padding for better tap targets */
+      border-radius: 5px; /* Add border radius for visual appeal */
     }
-
-    .project-card p,
-    .Education-card p {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+  
+    /* About Section */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
     }
-
-    /* Fix tag wrapping */
-    .project-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: center;
+  
+    .about-content img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Make image circular */
     }
-
-    .project-tags span {
-        margin: 0.25rem;
+  
+    .about-text h3 {
+      font-size: 1.8rem;
     }
-    
-    .project-card:last-child,
-    .Education-card:last-child {
-        margin-bottom: 0;
+  
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.5; /* Improve readability */
     }
-
-    .resume-section {
-        padding: 50px 25px;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-
+  
+    /* General Section Styling */
     .section {
-        padding: 1.5rem;
+      padding: 2rem 1.5rem; /* Adjust padding for 16:9 aspect ratio */
+      text-align: center;
     }
-
+  
+    .section-container {
+      padding: 0 20px; /* Adjust padding for 16:9 aspect ratio */
+    }
+  
+    /* Projects Section */
+    #Projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .project-card {
+      width: 90%;
+      max-width: 400px;
+      padding: 1.5rem; /* Add padding to project cards */
+      border: 1px solid #ccc; /* Add subtle border for better separation */
+      border-radius: 5px; /* Add border radius for visual appeal */
+    }
+  
+    .ref-button {
+      width: auto;
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 3px; /* Add border radius for visual appeal */
+    }
+  
+    .project-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+  
+    .project-tags span {
+      margin: 0.25rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px; /* Add border radius for visual appeal */
+      background-color: #f0f0f0; /* Add subtle background color */
+    }
+  
+    /* Education Section */
+    #Education {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    #Education.section {
+      padding: 2rem 1.5rem; /* Adjust padding for 16:9 aspect ratio */
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .Education-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .Education-card {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 1.5rem; /* Add padding to education cards */
+      border: 1px solid #ccc; /* Add subtle border for better separation */
+      border-radius: 5px; /* Add border radius for visual appeal */
+    }
+  
+    #Education h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .Education-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+  
+    .Education-card p {
+      font-size: 1rem;
+      line-height: 1.5; /* Improve readability */
+      margin-bottom: 1.5rem;
+    }
+  
+    /* Skills Section */
+    .skills-container {
+      justify-content: center;
+    }
+  
+    .skill-box {
+      flex: 1 1 calc(50% - 20px);
+    }
+  
+    /* Resume Section */
+    .resume-section {
+      padding: 40px 20px; /* Reduced padding for better mobile view */
+    }
+  
+    /* Contact Section */
+    h1 {
+      font-size: 1.75rem;
+    }
+  
     .contact-link {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 5px; /* Add border radius for visual appeal */
     }
-
+  
     .wrapper {
-        gap: 1rem;
+      gap: 1rem;
     }
-}
-@media screen and (max-width: 480px) {
+  }
+  
+  @media screen and (max-width: 480px) {
     .projects-grid,
     .Education-grid {
-        padding: 0 10px;
+      padding: 0 15px; /* Adjust padding for 16:9 aspect ratio */
     }
-
+  
     .project-card,
     .Education-card {
-        max-width: 300px;
+      max-width: 300px;
     }
-
+  
     .section-container {
-        padding: 0 10px;
+      padding: 0 20px; /* Adjust padding for 16:9 aspect ratio */
     }
-
+  
     .ref-button {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
     }
-}
+  }
