@@ -469,151 +469,125 @@ main {
     content: '📧';
     font-size: 1.5rem;
 }
-
-/* General Styles for Mobile View */
 @media screen and (max-width: 768px) {
-    /* Fixed Navigation Bar */
     nav {
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none; /* Hide the navbar on scroll */
     }
-  
-    /* Adjusting the layout for the header */
-    .profile-section {
-      text-align: center;
-      padding: 20px;
+
+    nav.fixed {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
     }
-  
-    .profile-image {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto;
-      border-radius: 50%;
+
+    .wrapper {
+        display: block;
+        text-align: center;
+        justify-content: center;
     }
-  
-    .portfolio-container {
-      padding: 10px;
+
+    .icon {
+        margin-bottom: 10px;
     }
-  
-    /* Navigation Buttons */
-    .nav-wrapper button {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      margin-bottom: 10px;
+
+    .icon > i {
+        font-size: 2rem;
     }
-  
-    /* Section Content */
-    .section-content {
-      padding: 15px;
-    }
-  
-    /* Skills Section */
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-  
-    .skill-box {
-      width: 45%;
-      text-align: center;
-      padding: 10px;
-      margin-bottom: 15px;
-      background-color: #f4f4f4;
-      border-radius: 5px;
-    }
-  
-    /* Project and Education Sections - Cards in 3 Columns */
+}
+
+/* Responsive Project and Education Cards */
+@media screen and (max-width: 768px) {
     .projects-grid, .Education-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
-  
+
     .project-card, .Education-card {
-      padding: 20px;
-      background-color: #f4f4f4;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
-  
-    /* Education Section */
-    .Education-links {
-      margin-top: 10px;
+
+    .project-card h3, .Education-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
-  
-    /* Resume Section */
-    .resume-description {
-      font-size: 16px;
+
+    .project-tags {
+        font-size: 0.9rem;
     }
-  
-    /* Contact Section */
+
+    .project-links, .Education-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Adjusting the Resume Section */
+@media screen and (max-width: 768px) {
+    .resume-section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .resume-section .section-title {
+        font-size: 2rem;
+    }
+
+    .resume-section .resume-description {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .resume-section .download-btn button {
+        padding: 10px 20px;
+    }
+}
+
+/* Adjust Contact Section */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 1.5rem;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .contact-link {
-      text-align: center;
-      display: block;
-      margin-top: 20px;
-      font-size: 16px;
-      text-decoration: none;
-      color: #007bff;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        width: 80%;
+        margin: 0 auto;
     }
-  }
-  
-  /* Styles for Extra Small Mobile Devices */
-  @media screen and (max-width: 480px) {
-    /* Profile Image */
-    .profile-image {
-      width: 60px;
-      height: 60px;
+
+    .contact-link::before {
+        font-size: 1.5rem;
     }
-  
-    /* Profile Text */
+}
+
+/* Styling for Skills Container */
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .skill-box {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+/* Media Query for Font Size Adjustments */
+@media screen and (max-width: 768px) {
     h1 {
-      font-size: 22px;
+        font-size: 2rem;
     }
-  
-    .sub-title {
-      font-size: 14px;
+
+    p {
+        font-size: 1rem;
     }
-  
-    .description {
-      font-size: 14px;
-    }
-  
-    /* Social Icons */
-    .wrapper a {
-      font-size: 18px;
-      margin: 0 8px;
-    }
-  
-    /* Project Card */
-    .project-card {
-      padding: 15px;
-    }
-  
-    /* Education Card */
-    .Education-card {
-      padding: 15px;
-    }
-  
-    /* Contact Section */
-    h4 {
-      font-size: 14px;
-    }
-  
-    /* Resume Button */
-    .download-btn button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  
-    /* Three cards per row on small screens */
-    .projects-grid, .Education-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
+}

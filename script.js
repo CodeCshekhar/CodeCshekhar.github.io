@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('scroll', () => {
-        if (window.innerWidth <= 767) { // Check if it's a mobile device
+        if (window.innerWidth <= 768) { // Check if it's a mobile device
           const navbar = document.querySelector('.nav-wrapper');
           if (window.scrollY > 50) { // Adjust scroll threshold as needed
             navbar.classList.remove('show-navbar');
