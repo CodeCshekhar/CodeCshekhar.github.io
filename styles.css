@@ -469,8 +469,18 @@ main {
     content: '📧';
     font-size: 1.5rem;
 }
+
 /* General Styles for Mobile View */
 @media screen and (max-width: 768px) {
+    /* Fixed Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
     /* Adjusting the layout for the header */
     .profile-section {
       text-align: center;
@@ -518,41 +528,23 @@ main {
       border-radius: 5px;
     }
   
-    /* Project Section */
-    .projects-grid {
-      display: flex;
-      flex-direction: column;
+    /* Project and Education Sections - Cards in 3 Columns */
+    .projects-grid, .Education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
   
-    .project-card {
+    .project-card, .Education-card {
       padding: 20px;
       background-color: #f4f4f4;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
   
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-  
-    .project-links {
-      margin-top: 10px;
-    }
-  
     /* Education Section */
-    .Education-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .Education-card {
-      padding: 20px;
-      background-color: #f4f4f4;
-      border-radius: 10px;
+    .Education-links {
+      margin-top: 10px;
     }
   
     /* Resume Section */
@@ -603,6 +595,11 @@ main {
       padding: 15px;
     }
   
+    /* Education Card */
+    .Education-card {
+      padding: 15px;
+    }
+  
     /* Contact Section */
     h4 {
       font-size: 14px;
@@ -612,6 +609,11 @@ main {
     .download-btn button {
       font-size: 14px;
       padding: 8px 16px;
+    }
+  
+    /* Three cards per row on small screens */
+    .projects-grid, .Education-grid {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   
