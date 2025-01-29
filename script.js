@@ -50,6 +50,19 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollPosition = currentScrollPosition;
     });
 
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 767) { // Check if it's a mobile device
+          const navbar = document.querySelector('.nav-wrapper');
+          if (window.scrollY > 50) { // Adjust scroll threshold as needed
+            navbar.classList.remove('show-navbar');
+            navbar.classList.add('hide-navbar');
+          } else {
+            navbar.classList.remove('hide-navbar');
+            navbar.classList.add('show-navbar');
+          }
+        }
+      });
+
     // Adjust profile image height dynamically
     function adjustHeights() {
         const profileImage = document.querySelector('.profile-image');
