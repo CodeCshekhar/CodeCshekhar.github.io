@@ -80,12 +80,13 @@ p {
 @media screen and (max-width: 768px) {
     .projects-grid, .Education-grid {
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
         gap: 1rem;
     }
 
     .project-card, .Education-card {
         text-align: center;
+        font-size: 1rem;
         width: 100%;
         margin-bottom: 1.5rem;
     }
@@ -96,7 +97,7 @@ p {
     }
 
     .project-tags {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .project-links, .Education-links {
