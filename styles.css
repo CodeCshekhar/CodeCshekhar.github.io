@@ -537,20 +537,9 @@ main {
 
 @media (max-width: 768px) {
     nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        transition: top 0.3s; /* smooth transition */
-        z-index: 10;
+        display: none;
     }
 
-    /* Initial state, the navbar is visible */
-    nav.hide {
-        top: -60px; /* Adjust this value according to the height of your navbar */
-    }
-    
     header {
         padding: 1.5rem;
     }
