@@ -572,12 +572,7 @@ main {
 
 @media (max-width: 576px) {
     nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    nav button {
-        width: 100%;
+        display: none;
     }
 
     .profile-image {
