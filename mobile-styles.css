@@ -8,12 +8,14 @@ body {
     background: url('https://lucdn.letsupgrade.net/assets/users_count_bg_73c24b4781.gif') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .profile-image {
     width: 120px;
     height: 120px;
-    margin: left;
+    margin: 0 auto;
     border-radius: 50%;
     background: #cccccc00;
     background-image: url('My Image.jpg'); /* Replace with your profile image */
@@ -24,8 +26,8 @@ body {
 
 header {
     display: block;
-    text-align: left;
-    padding: 2rem 1rem;
+    text-align: center;
+    padding: 1rem;
     background: rgba(30, 34, 42, 0.85);
     border-radius: 16px;
     margin: 1rem auto;
@@ -42,7 +44,7 @@ h1 {
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #c7ccc3;
 }
 
@@ -62,9 +64,10 @@ p {
     }
 
     .wrapper {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        justify-content: center;
     }
 
     .icon {
@@ -80,16 +83,22 @@ p {
 @media screen and (max-width: 768px) {
     .projects-grid, .Education-grid {
         display: flex;
-        max-width: 700px;
-        flex-direction:column;
+        flex-direction: column;
         gap: 1rem;
+        width: 100%; /* Full width of the screen */
+        margin: 0; /* Remove margin to fit corners */
+        padding: 0 1rem; /* Add slight padding to avoid touching screen edges */
     }
 
     .project-card, .Education-card {
         text-align: center;
-        font-size: 1.5rem;
-        width: 100%;
+        font-size: 1rem;
+        width: 100%; /* Full width of the grid */
         margin-bottom: 1rem;
+        padding: 1rem; /* Add padding inside the card */
+        background: rgba(255, 255, 255, 0.1); /* Optional: Add background for better visibility */
+        border-radius: 8px; /* Slightly rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
     }
 
     .project-card h3, .Education-card h3 {
@@ -103,7 +112,7 @@ p {
     }
 
     .project-tags {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .project-links, .Education-links {
@@ -116,40 +125,42 @@ p {
     .resume-section {
         width: 90%;
         padding: 20px;
+        margin: 0 auto;
     }
 
     .resume-section .section-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .resume-section .resume-description {
-        font-size: 1.2rem;
+        font-size: 1rem;
         max-width: 100%;
     }
 
     .resume-section .download-btn button {
         padding: 10px 20px;
+        font-size: 1rem;
     }
 }
 
 /* Adjust Contact Section */
 @media screen and (max-width: 768px) {
     #contact {
-        padding: 1.5rem;
+        padding: 1rem;
         text-align: center;
         width: 90%;
         margin: 0 auto;
     }
 
     .contact-link {
-        padding: 1rem 2rem;
-        font-size: 1.2rem;
-        width: 80%;
+        padding: 1rem;
+        font-size: 1rem;
+        width: 100%;
         margin: 0 auto;
     }
 
     .contact-link::before {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -159,22 +170,24 @@ p {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
     .skill-box {
         flex: 1 1 100%;
         text-align: center;
+        font-size: 1rem;
     }
 }
 
 /* Media Query for Font Size Adjustments */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
-
