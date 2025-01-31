@@ -6,12 +6,14 @@ body {
     background: url('https://lucdn.letsupgrade.net/assets/users_count_bg_73c24b4781.gif') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .profile-image {
     width: 150px;
     height: 150px;
-    margin: left;
+    margin: 0 auto;
     border-radius: 50%;
     background: #cccccc00;
     background-image: url('My Image.jpg'); /* Replace with your profile image */
@@ -21,8 +23,10 @@ body {
 }
 
 header {
-    display: left;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 2rem 1rem;
     background: rgba(30, 34, 42, 0.85);
     border-radius: 16px;
@@ -47,11 +51,13 @@ p {
 /* Navigation */
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 0.5rem;
 }
 
 nav button {
@@ -75,7 +81,7 @@ nav button:hover {
 
 /* Sections */
 main {
-    padding: 2rem;
+    padding: 2rem 1rem;
     max-width: 1200px;
     margin: auto;
 }
@@ -109,6 +115,7 @@ main {
 
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -125,7 +132,8 @@ main {
     align-items: center;
     overflow: hidden;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .icon > i {
@@ -135,7 +143,7 @@ main {
 }
 
 .icon:hover > i {
-    scale: 1.2;
+    transform: scale(1.2);
     color: #f1f1f1;
 }
 
@@ -183,19 +191,21 @@ main {
 }
 
 .outer-box {
-    border: 4px solid #c8c3c3; /* Outer box border */
-    padding: 30px; /* Padding inside the outer box */
+    border: 4px solid #c8c3c3;
+    padding: 30px;
     background-color: #222028;
-    box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74); /* Light gray background for the outer box */
-    border-radius: 20px; /* Rounded corners for the outer box */
+    box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
+    border-radius: 20px;
 }
 
 .about-me {
-    text-align: right;
-    border: 2px solid #1c1b1b; /* Adds a border around the inner box */
-    padding: 20px; /* Adds padding inside the inner box */
-    background-color: #f9f9f9; /* Sets a light background color */
-    border-radius: 8px; /* Rounds the corners of the inner box */
+    text-align: center;
+    border: 2px solid #1c1b1b;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-me h2 {
@@ -210,19 +220,18 @@ main {
     color: #555;
 }
 
-
-/* Skill Section */
+/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
 }
 
 .skill-box {
-    flex: 1 1 calc(33.33% - 20px);
-    box-sizing: border-box;
+    flex: 1 1 200px;
+    max-width: 300px;
     color: #ffffff;
     padding: 15px;
     border: 1px solid #858383;
@@ -247,11 +256,12 @@ main {
     box-shadow: 0 4px 6px rgb(80, 22, 22);
 }
 
+/* Projects Section */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     box-sizing: border-box;
 }
@@ -263,7 +273,7 @@ main {
     border-radius: 16px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
-    width: 31%;
+    width: calc(33.333% - 2rem);
     min-width: 280px;
     box-sizing: border-box;
 }
@@ -314,6 +324,7 @@ main {
     box-shadow: 0 4px 6px rgb(80, 22, 22);
 }
 
+/* Education Section */
 #Education.section {
     padding: 3rem 2rem;
 }
@@ -322,7 +333,7 @@ main {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 .Education-grid {
@@ -341,7 +352,8 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center-align text */
 }
 
 .Education-card:hover {
@@ -369,12 +381,29 @@ main {
     margin-top: 1.5rem;
 }
 
+.Education-card a {
+    display: inline-block;
+    background: linear-gradient(135deg, #36d1dc 0%, #5b86e5 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0.1);
+}
+
+.Education-card a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgb(80, 22, 22);
+}
+
+/* Resume Section */
 .resume-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     background: linear-gradient(to right, #12161a, #121e20);
     color: white;
     padding: 20px;
@@ -387,7 +416,7 @@ main {
 
 .resume-section .section-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -397,9 +426,9 @@ main {
 
 .resume-section .resume-description {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 20px;
-    line-height: 0.6;
+    line-height: 1.6;
     letter-spacing: 1px;
     color: #ecf0f1;
     max-width: 800px;
@@ -424,25 +453,28 @@ main {
     transform: scale(1.1);
 }
 
+/* Contact Section */
 #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     font-size: 1.1rem;
     padding: 2rem;
     background: rgba(21, 24, 28, 0.85);
     box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
     border-radius: 20px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 2rem auto;
     width: 90%;
 }
 
-#contact h2{
+#contact h2 {
     font-size: 1.7rem;
+    color: #c7ccc3;
+    margin-bottom: 1rem;
 }
+
 .contact-link {
     display: inline-flex;
     align-items: center;
@@ -474,15 +506,119 @@ main {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .project-card {
-        width: 48%;
+        width: 100%;
     }
 
     .skill-box {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .Education-card {
+        width: 100%;
+    }
+
+    .resume-section .section-title {
+        font-size: 2rem;
+    }
+
+    nav button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        transition: top 0.3s; /* smooth transition */
+        z-index: 10;
+    }
 
+    /* Initial state, the navbar is visible */
+    nav.hide {
+        top: -60px; /* Adjust this value according to the height of your navbar */
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
 
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .skill-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .resume-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    .resume-section .resume-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav button {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-me p {
+        font-size: 0.9rem;
+    }
+
+    .resume-section {
+        padding: 1rem;
+    }
+
+    .resume-section .download-btn button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-link {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
