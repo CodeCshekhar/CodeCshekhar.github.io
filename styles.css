@@ -507,6 +507,9 @@ main {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 992px) {
+    nav {
+        display: none;
+    }
     .projects-grid {
         flex-direction: column;
         align-items: center;
