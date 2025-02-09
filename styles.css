@@ -457,7 +457,7 @@ main {
 }
 
 .resume-section .resume-description {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
     margin-bottom: 20px;
     line-height: 1.6;
