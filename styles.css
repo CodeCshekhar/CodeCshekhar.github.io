@@ -503,7 +503,7 @@ main {
 
 #contact h2 {
     font-size: 1.7rem;
-    color: #c7ccc3;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -517,7 +517,7 @@ main {
     text-decoration: none;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(181, 181, 182, 0.74);
+    box-shadow: 0 4px 6px rgba(221, 221, 222, 0.992);
     gap: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
