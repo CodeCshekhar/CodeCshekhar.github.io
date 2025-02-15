@@ -544,7 +544,7 @@ main {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 992px) {
+@media (max-width: 1080px) {
     nav {
         display: none;
     }
