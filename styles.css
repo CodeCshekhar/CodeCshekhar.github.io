@@ -543,50 +543,6 @@ main {
     font-size: 1.7rem;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 900px) {
-    nav {
-        display: none;
-    }
-
-    header {
-        width: 95%;
-        padding: 1.5rem;
-        border-radius: 12px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1.2rem;
-    }
-
-    .projects-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 100%;
-    }
-
-    .skill-box {
-        flex: 1 1 45%;
-        max-width: 45%;
-    }
-
-    .Education-card {
-        width: 100%;
-    }
-
-    .resume-section .section-title {
-        font-size: 2rem;
-    }
-
-}
-
 @media (max-width: 768px) {
     nav {
         display: none;
@@ -594,7 +550,7 @@ main {
 
     header {
         width: 90%;
-        padding: 1.5rem;
+        padding: 1rem;
         border-radius: 12px;
     }
 
@@ -630,7 +586,7 @@ main {
     }
 
     header {
-        width: 100%;
+        width: 87%;
         padding: 1rem;
         border-radius: 8px;
     }
